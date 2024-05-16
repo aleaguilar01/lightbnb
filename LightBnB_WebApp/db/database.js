@@ -126,11 +126,12 @@ const getAllProperties = function(options, limit = 10) {
   SELECT properties.*, AVG(rating) as average_rating
  FROM properties
  JOIN property_reviews ON properties.id = property_reviews.property_id 
+ WHERE 1=1
  `;
 
   if (options.city) {
-    queryParams.push(`%${options.city}%`);
-    queryString += `WHERE city LIKE $${queryParams.length}`;
+    queryParams.push(`%${options.city.toLowerCase()}%`);
+    queryString += `AND LOWER(city) LIKE $${queryParams.length}`;
   }
 
   if (options.owner_id) {
