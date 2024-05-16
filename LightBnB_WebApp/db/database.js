@@ -91,19 +91,20 @@ const getAllReservations = function(guestId, limit = 10) {
 
   return pool
     .query(
-      `SELECT reservations.* properties.title, properties.cost_per_night, avg(property_reviews.rating) as property_rating
+      `SELECT reservations.*, properties.*, avg(property_reviews.rating) as property_rating
       FROM reservations
       JOIN properties
       ON properties.id = reservations.property_id
       JOIN property_reviews
       ON properties.id = property_reviews.property_id
       WHERE reservations.guest_id = $1
-      GROUP BY reservations.id, properties.title, reservations.start_date, properties.cost_per_night
+      GROUP BY reservations.id, properties.id, properties.title, reservations.start_date, properties.cost_per_night
       ORDER BY start_date
-      LIMIT $2;`, [guestId, limit]
+      LIMIT $2`, [guestId, limit]
     )
     .then((result) => {
-      return result.rows[0];
+      console.log(result.rows);
+      return result.rows;
     })
     .catch((err) => {
       console.log(err.message);
