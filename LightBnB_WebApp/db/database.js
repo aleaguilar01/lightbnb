@@ -63,7 +63,8 @@ const addUser = function(user) {
     .query(
       `INSERT into USERS (
         name, email, password
-      ) VALUES ($1, $2, $3)`,
+      ) VALUES ($1, $2, $3)
+      RETURNING *`,
       [user.name, user.email, user.password])
     .then((result) => {
       return result.rows[0];
