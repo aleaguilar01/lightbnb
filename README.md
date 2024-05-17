@@ -30,7 +30,7 @@ A single page Airbnb clone that uses a server-side JavaScript to display the inf
 ## Screenshots 
 
 - ERD
-!["ERD"](https://github.com/aleaguilar01/lightbnb/blob/main/docs/LIGHTHOUSE-ERD.png?raw=true)
+!["ERD"](https://github.com/aleaguilar01/lightbnb/blob/main/docs/ERD.png?raw=true)
 
 - Create listings
 !["Create listings"](https://github.com/aleaguilar01/lightbnb/blob/main/docs/create_listings.png?raw=true)
