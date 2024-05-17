@@ -31,3 +31,19 @@ A single page Airbnb clone that uses a server-side JavaScript to display the inf
 
 - ERD
 !["ERD"](https://github.com/aleaguilar01/lightbnb/blob/main/docs/LIGHTHOUSE-ERD.png?raw=true)
+
+- Create listings
+!["Create listings"](https://github.com/aleaguilar01/lightbnb/blob/main/docs/create_listings.png?raw=true)
+
+- My listings
+!["My listings"](https://github.com/aleaguilar01/lightbnb/blob/main/docs/my_listings.png?raw=true)
+
+- My reservations
+!["My reservations"](https://github.com/aleaguilar01/lightbnb/blob/main/docs/my_reservations.png?raw=true)
+
+
+## Stretch Work
+
+- Extend the LightBnB ERD by adding more tables for rates and guest reviews (can check this on the ERD).
+- Implement the Suggested Project Structure in the LightBnB app.
+
